@@ -196,6 +196,7 @@
     text-align: center;
     margin-top: 5px;
     margin-bottom: 10px;
+   
 }
 
 #map 
@@ -246,4 +247,8 @@
 .footer
 {
     width: 100%;
+}
+.logo
+{
+    align-items: left;
 }
