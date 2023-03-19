@@ -23,6 +23,5 @@ export class WeatherService {
         .set('units','metric')
         .set('mode','json')
       })
-      //GeoLocation
     }
 }
