@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit{
 
   }
   cityName: string='Dehradun'; 
-  weatherData?: WeatherData;
+  weatherData!: WeatherData;
   ngOnInit() {
    if(!navigator.geolocation)
    {

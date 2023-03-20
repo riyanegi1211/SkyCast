@@ -80,7 +80,7 @@
       <h5>Sunrise</h5>
     </div>
     <div class="desc">
-      <h5>6:30</h5>
+      <h5>{{weatherData.sys.sunrise * 1000 | date:'H:mm'}}</h5>
     </div>
   </div>
   <!--Card 2-->
@@ -92,7 +92,7 @@
       <h5>Longitude</h5>
     </div>
     <div class="desc">
-      <h5>78.032188°</h5>
+      <h5>{{weatherData.coord.lon}}°</h5>
     </div>
   </div>
   <!--Card 3-->
@@ -104,19 +104,19 @@
       <h5>Pressure</h5>
     </div>
     <div class="desc">
-      <h5>1018 hpa</h5>
+      <h5>{{weatherData.main.pressure}} hpa</h5>
     </div>
   </div>
   <!--Card 4-->
   <div class="cards">
     <div class="image">
-      <img src="../assets/SeaLevel.png">
+      <img src="../assets/Gust.png">
     </div>
     <div class="title">
-      <h5>Sea Level</h5>
+      <h5>Gust</h5>
     </div>
     <div class="desc">
-      <h5>640 m</h5>
+      <h5>{{weatherData.wind.gust}}%</h5>
     </div>
   </div>
   <!--Cards part 2-->
@@ -129,7 +129,7 @@
       <h5>Sunset</h5>
     </div>
     <div class="desc">
-      <h5>19:35</h5>
+      <h5>{{weatherData.sys.sunset* 1000 | date:'H:mm'}}</h5>
     </div>
   </div>
   <!--Card 6-->
@@ -141,7 +141,7 @@
       <h5>Latitude</h5>
     </div>
     <div class="desc">
-      <h5>30.316496°</h5>
+      <h5>{{weatherData.coord.lat}}°</h5>
     </div>
   </div>
   <!--Card 7-->
@@ -153,19 +153,19 @@
       <h5>Dew Point</h5>
     </div>
     <div class="desc">
-      <h5>55%</h5>
+      <h5>{{weatherData.main.humidity}}%</h5>
     </div>
   </div>
   <!--Card 8-->
   <div class="cards">
     <div class="image">
-      <img src="../assets/GroundLevel.png">
+      <img src="../assets/Visibility.png">
     </div>
     <div class="title">
-      <h5>Ground Level</h5>
+      <h5>Visibility</h5>
     </div>
     <div class="desc">
-      <h5>13.28 m</h5>
+      <h5>{{weatherData.visibility}} m</h5>
     </div>
   </div>
 </div>

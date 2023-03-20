@@ -12,7 +12,9 @@ export class WeatherService {
   constructor(private http:HttpClient) { }
 
     getWeatherData(cityName: string):Observable<WeatherData>
+    
     {
+      console.log(environment.weatherApiBaseUrl);
       return this.http.get<WeatherData>(environment.weatherApiBaseUrl,{
         headers: new HttpHeaders()
         .set(environment.XRapidAPIHostHeaderName,environment.XRapidAPIHostHeaderValue)
