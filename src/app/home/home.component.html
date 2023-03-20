@@ -80,7 +80,7 @@
       <h5>Sunrise</h5>
     </div>
     <div class="desc">
-      <h5>6:30</h5>
+      <h5>{{weatherData.sys.sunrise * 1000 | date:'H:mm'}}</h5>
     </div>
   </div>
   <!--Card 2-->
@@ -129,7 +129,7 @@
       <h5>Sunset</h5>
     </div>
     <div class="desc">
-      <h5>6:30</h5>
+      <h5>{{weatherData.sys.sunset* 1000 | date:'H:mm'}}</h5>
     </div>
   </div>
   <!--Card 6-->
