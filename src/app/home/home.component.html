@@ -1,0 +1,175 @@
+<div class="main">
+  <!--heading-->
+  <div class="logo">
+  <img src="../assets/SkyCast1.png">
+  </div>
+<!--Search Box-->
+<div class="search">
+  <form #form="ngForm" (submit)="onSubmit()">
+    <input type="text" placeholder="Search city" name="city" [(ngModel)]="cityName">
+  </form>
+</div>
+<!--Toady's Temperature-->
+
+<div class="today" *ngIf="weatherData">
+  <div class="upper-data">
+  <img src="../assets/Cold-Night.webp" *ngIf="weatherData.main.temp <= 10">
+  <img src="../assets/Mild-Day.png" *ngIf="weatherData.main.temp <= 20 && weatherData.main.temp > 10">
+  <img src="../assets/Hot-Day.webp" *ngIf="weatherData.main.temp <= 25 && weatherData.main.temp > 20">
+  <img src="../assets/Sunny-Day.webp" *ngIf="weatherData.main.temp <= 30 && weatherData.main.temp > 25">
+  <img src="../assets/Hot-Day.png" *ngIf="weatherData.main.temp <= 40 && weatherData.main.temp > 30">
+  <img src="../assets/Very-Hot-Day.jpg" *ngIf="weatherData.main.temp > 40">
+    <div class="weather-data">
+      <div class="location">{{weatherData.name}}</div>
+      <div class="temperature">{{weatherData.main.temp | number: '1.0-0'}}°C</div>
+    </div>
+</div>
+  <div class="lower-data">
+    <div class="more-info-label">
+      More Information
+    </div>
+    <div class="more-info-container">
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/Min.png">
+          <span>Min</span>
+        </div>
+        <div class="info-block-value">
+          {{weatherData.main.temp_min | number: '1.0-0'}}°C
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/Max.png">
+          <span>Max</span>
+        </div>
+        <div class="info-block-value">
+          {{weatherData.main.temp_max | number: '1.0-0'}}°C
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/Humidity.png">
+          <span>Humidity</span>
+        </div>
+        <div class="info-block-value">
+          {{weatherData.main.humidity| number: '1.0-0'}}%
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/Wind (1).png">
+          <span>Wind</span>
+        </div>
+        <div class="info-block-value">
+          {{weatherData.wind.speed| number: '1.0-0'}} km/h
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--More Information-->
+<div class="main-card">
+  <h2>Know More About The City</h2>
+  <!--Card 1-->
+  <div class="cards">
+    <div class="image">
+      <img src="../assets/Sunrise.png">
+    </div>
+    <div class="title">
+      <h5>Sunrise</h5>
+    </div>
+    <div class="desc">
+      <h5>6:30</h5>
+    </div>
+  </div>
+  <!--Card 2-->
+  <div class="cards">
+    <div class="image">
+      <img src="../assets/Longitude.png">
+    </div>
+    <div class="title">
+      <h5>Longitude</h5>
+    </div>
+    <div class="desc">
+      <h5>78.032188°</h5>
+    </div>
+  </div>
+  <!--Card 3-->
+  <div class="cards">
+    <div class="image">
+      <img src="../assets/Pressure.png">
+    </div>
+    <div class="title">
+      <h5>Pressure</h5>
+    </div>
+    <div class="desc">
+      <h5>1018 hpa</h5>
+    </div>
+  </div>
+  <!--Card 4-->
+  <div class="cards">
+    <div class="image">
+      <img src="../assets/SeaLevel.png">
+    </div>
+    <div class="title">
+      <h5>Sea Level</h5>
+    </div>
+    <div class="desc">
+      <h5>640 m</h5>
+    </div>
+  </div>
+  <!--Cards part 2-->
+  <!--Cards part 5-->
+  <div class="cards">
+    <div class="image">
+      <img src="../assets/Sunset.png">
+    </div>
+    <div class="title">
+      <h5>Sunset</h5>
+    </div>
+    <div class="desc">
+      <h5>19:35</h5>
+    </div>
+  </div>
+  <!--Card 6-->
+  <div class="cards">
+    <div class="image">
+      <img src="../assets/Latitude.png">
+    </div>
+    <div class="title">
+      <h5>Latitude</h5>
+    </div>
+    <div class="desc">
+      <h5>30.316496°</h5>
+    </div>
+  </div>
+  <!--Card 7-->
+  <div class="cards">
+    <div class="image">
+      <img src="../assets/DewPoint.png">
+    </div>
+    <div class="title">
+      <h5>Dew Point</h5>
+    </div>
+    <div class="desc">
+      <h5>55%</h5>
+    </div>
+  </div>
+  <!--Card 8-->
+  <div class="cards">
+    <div class="image">
+      <img src="../assets/GroundLevel.png">
+    </div>
+    <div class="title">
+      <h5>Ground Level</h5>
+    </div>
+    <div class="desc">
+      <h5>13.28 m</h5>
+    </div>
+  </div>
+</div>
+
+<!--Map-->
+<div id="map"></div>
+
