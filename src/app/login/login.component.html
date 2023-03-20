@@ -1,5 +1,4 @@
 <!-- Login Form -->
-
 <div *ngIf="loginActive" class="background">
     <div class="container" style="padding-bottom: 20px;">
         <div class="put-center">
@@ -37,8 +36,8 @@
 </div>  
 
 <!-- Registeration Form -->
-<div *ngIf="registerationActive">
-    <div class="container" style="padding-bottom: 20px;">
+<div *ngIf="registerationActive" class="background">
+    <div class="container" style="padding-bottom: 20px">
         <div class="put-center">
         <div class="form">
         <h2>REGISTER</h2>
@@ -55,6 +54,7 @@
                 <div class="form-group col-md-4">
                     <label for="inputPassword4">Password</label>
                     <input type="password" name="signUpObj.password" class="form-control" id="inputPassword4" placeholder="Password" [(ngModel)]="signUpObj.password">
+                <br>
                 </div>
             </div>
             <div class="form-row">
